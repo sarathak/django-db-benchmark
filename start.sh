@@ -1,8 +1,12 @@
-#!/usr/bin/env bash
-cd docker/mysql
-docker-compose run django
-docker-compose down
-cd ../../
-#cd docker/postgresql
-#docker-compose run django
-#docker-compose down
+#!/bin/bash
+set -e
+CONF=docker/mariadb/docker-compose.yml
+docker-compose -p ddbench -f $CONF run django
+docker-compose -p ddbench -f $CONF down
+CONF=docker/mysql/docker-compose.yml
+docker-compose -p ddbench -f $CONF run django
+docker-compose -p ddbench -f $CONF down
+CONF=docker/postgres/docker-compose.yml
+docker-compose -p ddbench -f $CONF run django
+docker-compose -p ddbench -f $CONF down
+python create_graph.py

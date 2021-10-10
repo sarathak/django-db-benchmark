@@ -100,7 +100,17 @@ elif DB_ENGINE == 'mysql':
             'PORT': '3306',  # Set to empty string for default. Not used with sqlite3.
         },
     }
-
+elif DB_ENGINE == 'mariadb':
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': os.getenv('MYSQL_DATABASE'),  # Or path to database file if using sqlite3.
+            'USER': os.getenv('MYSQL_USER'),  # Not used with sqlite3.
+            'HOST': 'db',  # Not used with sqlite3.
+            'PASSWORD': os.getenv('MYSQL_PASSWORD'),  # Set to empty string for localhost. Not used with sqlite3.
+            'PORT': '3306',  # Set to empty string for default. Not used with sqlite3.
+        },
+    }
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 

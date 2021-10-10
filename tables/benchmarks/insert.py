@@ -4,7 +4,7 @@ from django.conf import settings
 
 from tables.models import SimpleTable
 
-ROWS_LIST = [100, 1000, 5000, 10000]
+ROWS_LIST = [10, 100, 1000, 10000]
 
 
 def get_insert_time(rows):

@@ -1,0 +1,18 @@
+version: '3'
+services:
+  django:
+    build: ../../
+    depends_on:
+      - db
+    env_file:
+      - .env
+    command: >
+      sh -c "./wait-for-it.sh db:3306 &&
+             python manage.py migrate &&
+             python manage.py benchmark_db"
+    volumes:
+      - ./../../:/app
+  db:
+    image: mariadb
+    env_file:
+      - .env

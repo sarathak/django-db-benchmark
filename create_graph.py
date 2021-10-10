@@ -6,7 +6,7 @@ from os import path
 import json
 
 BASE_DIR = Path(__file__).resolve().parent
-DB_ENGINES = ['postgresql', 'mysql']
+DB_ENGINES = ['postgresql', 'mysql','mariadb']
 
 
 def get_file_name(engin, name):
