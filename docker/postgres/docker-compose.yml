@@ -1,0 +1,22 @@
+version: '3'
+services:
+  migrate:
+    build: ../../
+    depends_on:
+      - db
+    command: [ 'python','manage.py','migrate' ]
+  django:
+    build: ../../
+    depends_on:
+      - db
+    command: [ 'python','manage.py','benchmark_db' ]
+  db:
+    image: postgres:14.0-alpine
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: database
+      POSTGRES_USER: user
+    volumes:
+      - pgdata
+volumes:
+  pgdata:
