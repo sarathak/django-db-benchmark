@@ -7,12 +7,13 @@ services:
     env_file:
       - .env
     command: >
-      sh -c "./wait-for-it.sh db:5432&&
+      sh -c "./wait-for-it.sh db:3306 &&
              python manage.py migrate &&
              python manage.py benchmark_db"
     volumes:
       - ./../../:/app
   db:
-    image: postgres:14.0-alpine
+    image: mysql:8.0.26
+    command: mysqld --default-authentication-plugin=mysql_native_password
     env_file:
       - .env
