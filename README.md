@@ -1,6 +1,12 @@
 # django-db-benchmark
-Database benchmark with Django
+Database benchmark with Django ORM
 
-# Insert 
+- Postgresql 
+- MySQL
+- MariaDB
+- SQLite
+
+## Insert performance comparison 
 
 ![Insert](media/graphs/insert.png)
+

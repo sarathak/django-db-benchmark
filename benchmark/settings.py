@@ -72,12 +72,12 @@ WSGI_APPLICATION = 'benchmark.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 DB_ENGINE = os.getenv('DB_ENGINE', 'sqlite3')
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.getenv('DB_FILE', BASE_DIR / 'db.sqlite3'),
+    }
+}
 if DB_ENGINE == 'postgresql':
     DATABASES = {
         'default': {

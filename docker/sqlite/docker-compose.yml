@@ -1,0 +1,11 @@
+version: '3'
+services:
+  django:
+    build: ../../
+    env_file:
+      - .env
+    command: >
+      sh -c "python manage.py migrate &&
+             python manage.py benchmark_db"
+    volumes:
+      - ./../../:/app
