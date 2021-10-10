@@ -3,4 +3,4 @@ Database benchmark with Django
 
 # Insert 
 
-[!](media/graphs/insert.png)
+![Insert](media/graphs/insert.png)
