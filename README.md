@@ -1,6 +1,6 @@
 # django-db-benchmark
 Database benchmark with Django
 
-#Insert 
+# Insert 
 
-[](!media/graph/insert.png)
+[!](media/graphs/insert.png)
