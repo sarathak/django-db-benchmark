@@ -6,7 +6,14 @@ Database benchmark with Django ORM
 - MariaDB
 - SQLite
 
+Compating databse operation perfomence using django ORM 
+
+Postgreql vs MySQL vs MariaDB vs SQLite
+
+
+
 ## Insert performance comparison 
+Smaller is better Here *PostgreSQL* wins
 
 ![Insert](media/graphs/insert.png)
 
