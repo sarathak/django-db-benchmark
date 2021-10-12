@@ -35,3 +35,4 @@ def create_graph(name):
 
 if __name__ == '__main__':
     create_graph('insert')
+    create_graph('bulk_insert')

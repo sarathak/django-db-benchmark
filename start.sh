@@ -41,7 +41,7 @@ for DATABASE in $DATABASES
   do
     CONF="docker/$DATABASE/docker-compose.yml"
     echo "Testing $DATABASE"
-    docker-compose -p ddbench -f $CONF run django
+    docker-compose -p ddbench -f $CONF up django
     docker-compose -p ddbench -f $CONF down
   done
 python create_graph.py

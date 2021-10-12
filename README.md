@@ -17,3 +17,7 @@ Smaller is better Here *PostgreSQL* wins
 
 ![Insert](media/graphs/insert.png)
 
+## Bulk Insert performance comparison 
+Smaller is better Here *SQLite* wins
+
+![Insert](media/graphs/bulk_insert.png)
