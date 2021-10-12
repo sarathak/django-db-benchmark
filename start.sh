@@ -33,15 +33,16 @@ while [[ $# -gt 0 ]]; do
       ;;
   esac
 done
-if [ $BUILD -eq 1 ]; then
-  CONF="docker/postgresql/docker-compose.yml"
-  docker-compose -p ddbench -f $CONF build
-fi
-for DATABASE in $DATABASES
-  do
-    CONF="docker/$DATABASE/docker-compose.yml"
-    echo "Testing $DATABASE"
-    docker-compose -p ddbench -f $CONF up django
-    docker-compose -p ddbench -f $CONF down
-  done
-python create_graph.py
+
+#for DATABASE in $DATABASES
+#  do
+#    CONF="docker/$DATABASE/docker-compose.yml"
+#    echo "Testing $DATABASE"
+#    docker-compose -p ddbench -f $CONF up django
+#    docker-compose -p ddbench -f $CONF down
+#  done
+
+CONF="docker/report/docker-compose.yml"
+echo "Creating graph"
+docker-compose -p ddbench -f $CONF up django
+docker-compose -p ddbench -f $CONF down

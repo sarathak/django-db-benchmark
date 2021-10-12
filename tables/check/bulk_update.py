@@ -9,12 +9,14 @@ def row_generator(rows):
         yield SimpleTable(name='testname')
 
 
-class CheckBulkInsert(CheckBase):
-    name = 'bulk_insert'
-    graph_title = 'Bulk insert'
+class CheckBulkUpdate(CheckBase):
+    name = 'bulk_update'
+    graph_title = 'Bulk update'
 
     def check_rows(self, rows):
-        start_time = time()
+        SimpleTable.objects.all().delete()
         SimpleTable.objects.bulk_create(row_generator(rows))
+        start_time = time()
+        SimpleTable.objects.all().update(name='newname')
         time_taken = time() - start_time
         return time_taken

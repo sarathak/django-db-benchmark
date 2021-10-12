@@ -21,3 +21,20 @@ Smaller is better Here *PostgreSQL* wins
 Smaller is better Here *SQLite* wins
 
 ![Insert](media/graphs/bulk_insert.png)
+
+## Bulk Delete performance comparison 
+Smaller is better Here *SQLite* wins
+
+![Insert](media/graphs/bulk_delete.png)
+
+## Update performance comparison 
+Smaller is better Here *SQLite* wins
+
+![Insert](media/graphs/update.png)
+
+
+## Bulk update performance comparison 
+Smaller is better Here *SQLite* wins
+
+![Insert](media/graphs/bulk_update.png)
+
