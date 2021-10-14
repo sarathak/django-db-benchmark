@@ -4,3 +4,4 @@ Dockerfile
 .git
 README.md
 env.*
+.idea
