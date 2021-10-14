@@ -43,7 +43,7 @@ class CheckBase:
         my_colors = ('#047495', '#fac205', '#003045', '#63b2e0')
         fig, ax = plt.subplots()
         ax.set_ylabel('Time(s)')
-        ax.set_xlabel('Rows')
+        ax.set_xlabel('Database')
         index = []
         values = []
         for engine in settings.DB_ENGINES:
