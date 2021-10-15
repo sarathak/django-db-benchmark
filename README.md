@@ -42,3 +42,11 @@ Tested 1000 row bulk update in all databases and calculated time is taken.
 
 ![Insert](media/graphs/bulk_update.png)
 
+
+## Installation 
+
+- install docker and compose 
+- clone repository
+- run ./start.sh
+- result will be stored in reports/graph
+
