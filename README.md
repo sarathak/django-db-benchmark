@@ -1,5 +1,4 @@
-# django-db-benchmark
-Database benchmark with Django ORM
+# Comparing Database performance with Django ORM
 
 - Postgresql 
 - MySQL
