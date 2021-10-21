@@ -43,6 +43,18 @@ Tested 1000 row bulk update in all databases and calculated time is taken.
 ![Insert](media/graphs/bulk_update.png)
 
 
+
+## Select performance comparison 
+Tested 1000 in 1000 rows select operation in non indexed column in all databases and calculated time is taken.
+
+![Insert](media/graphs/select.png)
+
+
+## Select index performance comparison 
+Tested 1000 in 1000 rows select operation in indexed column in all databases and calculated time is taken.
+
+![Insert](media/graphs/select_index.png)
+
 ## Installation 
 
 - install docker and compose 
