@@ -40,7 +40,7 @@ class CheckBase:
         self.save_file(data)
 
     def create_graph(self):
-        my_colors = ('#047495', '#fac205', '#003045', '#63b2e0')
+        my_colors = ('#047495', '#fac205', '#003045', '#63b2e0','#6933ff')
         fig, ax = plt.subplots()
         ax.set_ylabel('Time(s)')
         ax.set_xlabel('Database')

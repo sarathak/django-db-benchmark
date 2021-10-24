@@ -1,0 +1,26 @@
+version: '3'
+services:
+  django:
+    build: ../../
+    depends_on:
+      - db_start
+    env_file:
+      - .env
+    command: >
+      sh -c "./wait-for-it.sh db:26257&&
+            python manage.py migrate &&
+             python manage.py benchmark_db"
+    volumes:
+      - ./../../:/app
+  db:
+    image: cockroachdb/cockroach:latest-v21.1
+    env_file:
+      - .env
+    command: start-single-node --logtostderr=WARNING --log-file-verbosity=WARNING --insecure
+  db_start:
+    image: cockroachdb/cockroach:latest-v21.1
+    env_file:
+      - .env
+    depends_on:
+      - db
+    command: sql --host db --insecure -e "CREATE DATABASE database;"

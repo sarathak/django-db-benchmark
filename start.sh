@@ -9,7 +9,7 @@ Usage:s]
 USAGE
     exit 1
 }
-DATABASES="postgresql mysql mariadb sqlite"
+DATABASES="postgresql mysql mariadb sqlite cockroachdb"
 BUILD=0
 while [[ $# -gt 0 ]]; do
   key="$1"
