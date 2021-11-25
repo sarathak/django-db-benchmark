@@ -4,12 +4,13 @@
 - MySQL
 - MariaDB
 - SQLite
+- CockoroachDB
 
 Comparing database operation performance using django ORM.
 
-PostgreSQL vs MySQL vs MariaDB vs SQLite
+PostgreSQL vs MySQL vs MariaDB vs SQLite vs CockoroachDB
 
-
+### The results given below are based on AWS T2 micro
 
 ## Insert performance comparison 
 Tested 1000 row insert in all databases and calculated time is taken.
