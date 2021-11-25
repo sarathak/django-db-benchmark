@@ -57,7 +57,7 @@ Tested 1000 in 1000 rows select operation in indexed column in all databases and
 
 ## Installation 
 
-- install docker and compose 
+- install [docker](https://docs.docker.com/engine/install/) and [docker compose](https://docs.docker.com/compose/install/) 
 - clone repository
 - run ./start.sh
 - result will be stored in reports/graph
