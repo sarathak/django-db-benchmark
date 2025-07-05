@@ -1,65 +1,75 @@
-# Comparing Database performance with Django ORM
+# Django ORM Database Performance Benchmark
 
-- Postgresql 
+This project benchmarks and compares the performance of popular SQL databases using the Django ORM. It provides detailed metrics for common database operations across different database backends.
+
+**Databases tested:**
+- PostgreSQL
 - MySQL
 - MariaDB
 - SQLite
-- CockoroachDB
+- CockroachDB
 
-Comparing database operation performance using django ORM.
+## Overview
 
-PostgreSQL vs MySQL vs MariaDB vs SQLite vs CockoroachDB
+Measure and compare the speed of database operations (insert, bulk insert, delete, bulk delete, update, bulk update, select, and indexed select) using Django ORM on AWS T2 micro instances. Results include execution time and performance graphs for each operation and database.
 
-### The results given below are based on AWS T2 micro
+## Benchmark Results
 
-## Insert performance comparison 
-Tested 1000 row insert in all databases and calculated time is taken.
+### Insert Performance Comparison
+Tested 1000 row inserts in all databases and measured execution time.
 
 ![Insert](media/graphs/insert.png)
 
-## Bulk Insert performance comparison 
-Tested 1000 row bulk insert in all databases and calculated time is taken.
+### Bulk Insert Performance Comparison
+Tested 1000 row bulk inserts in all databases and measured execution time.
 
-![Insert](media/graphs/bulk_insert.png)
+![Bulk Insert](media/graphs/bulk_insert.png)
 
-## Bulk Delete performance comparison 
-Tested 1000 row delete in all databases and calculated time is taken.
+### Delete Performance Comparison
+Tested 1000 row deletes in all databases and measured execution time.
 
-![Insert](media/graphs/delete.png)
+![Delete](media/graphs/delete.png)
 
-## Bulk Delete performance comparison 
-Tested 1000 row bulk delete in all databases and calculated time is taken.
+### Bulk Delete Performance Comparison
+Tested 1000 row bulk deletes in all databases and measured execution time.
 
-![Insert](media/graphs/bulk_delete.png)
+![Bulk Delete](media/graphs/bulk_delete.png)
 
-## Update performance comparison 
-Tested 1000 row update in all databases and calculated time is taken.
+### Update Performance Comparison
+Tested 1000 row updates in all databases and measured execution time.
 
-![Insert](media/graphs/update.png)
+![Update](media/graphs/update.png)
 
+### Bulk Update Performance Comparison
+Tested 1000 row bulk updates in all databases and measured execution time.
 
-## Bulk update performance comparison 
-Tested 1000 row bulk update in all databases and calculated time is taken.
+![Bulk Update](media/graphs/bulk_update.png)
 
-![Insert](media/graphs/bulk_update.png)
+### Select Performance Comparison (Non-Indexed Column)
+Tested 1000 select queries on non-indexed columns in all databases and measured execution time.
 
+![Select](media/graphs/select.png)
 
+### Select Performance Comparison (Indexed Column)
+Tested 1000 select queries on indexed columns in all databases and measured execution time.
 
-## Select performance comparison 
-Tested 1000 in 1000 rows select operation in non indexed column in all databases and calculated time is taken.
+![Select Index](media/graphs/select_index.png)
 
-![Insert](media/graphs/select.png)
+## How to Run the Benchmark
 
+1. Install [Docker](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/).
+2. Clone this repository:
+   ```sh
+   git clone https://github.com/yourusername/django-db-benchmark.git
+   cd django-db-benchmark
+   ```
+3. Start the benchmark:
+   ```sh
+   ./start.sh
+   ```
+4. View the results in the `reports/graph` directory.
 
-## Select index performance comparison 
-Tested 1000 in 1000 rows select operation in indexed column in all databases and calculated time is taken.
+## Keywords
 
-![Insert](media/graphs/select_index.png)
-
-## Installation 
-
-- install [docker](https://docs.docker.com/engine/install/) and [docker compose](https://docs.docker.com/compose/install/) 
-- clone repository
-- run ./start.sh
-- result will be stored in reports/graph
+Django ORM, database benchmark, SQL performance, PostgreSQL, MySQL, MariaDB, SQLite, CockroachDB, database comparison, bulk insert, bulk update, bulk delete, select performance, indexed query, AWS T2 micro, Docker, Python, open source.
 
